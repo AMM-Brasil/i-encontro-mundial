@@ -27,7 +27,7 @@ title: I Encontro Mundial AMM 2019
     <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}">
 </head>
 
-<body class="about-us">
+<body class="about-us" style="overflow-x: hidden">
     <header class="site-header">
         <div class="header-bar">
             <div class="container-fluid">
@@ -47,10 +47,10 @@ title: I Encontro Mundial AMM 2019
 
                             <ul>
                                 <li><a href="#">INÍCIO</a></li>
-                                <li><a href="#">O EVENTO</a></li>
-                                <li><a href="#">PROGRAMAÇÃO</a></li>
-                                <li><a href="#">INFORMAÇÕES</a></li>
-                                <li><a href="#">CONTATO</a></li>
+                                <li><a href="#evento">O EVENTO</a></li>
+                                <li><a href="#informacoes">INFORMAÇÕES</a></li>
+                                <li><a href="#programacao">PROGRAMAÇÃO</a></li>                                
+                                <li><a href="#contato">CONTATO</a></li>
                                 <li><a href="#"></a></li>
                             </ul><!-- flex -->
                         </nav><!-- .site-navigation -->
@@ -64,32 +64,36 @@ title: I Encontro Mundial AMM 2019
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="entry-header offset-1 col-10">
+                    <div class="entry-header offset-1 col-10 offset-md-4 col-md-4">
                         <img src="{{ 'assets/images/event_logo.png' | relative_url }}" class="img-fluid mx-auto d-block"
                             alt="Logo do evento I Encontro Mundial do AMM">
                     </div><!-- .entry-header -->
 
-                    <div class="countdown row justify-content-between" data-date="2019/11/15">
-                        <div class="countdown-holder col-3">
-                            <div class="dday"></div>
-                            <label>Dias</label>
-                        </div><!-- .countdown-holder -->
+                    <div class="offset-md-3 col-md-6">
 
-                        <div class="countdown-holder col-3">
-                            <div class="dhour"></div>
-                            <label>Horas</label>
-                        </div><!-- .countdown-holder -->
+                        <div class="countdown row justify-content-between" data-date="2019/11/15">
+                            <div class="countdown-holder col-3">
+                                <div class="dday"></div>
+                                <label>Dias</label>
+                            </div><!-- .countdown-holder -->
 
-                        <div class="countdown-holder col-3">
-                            <div class="dmin"></div>
-                            <label>Minutos</label>
-                        </div><!-- .countdown-holder -->
+                            <div class="countdown-holder col-3">
+                                <div class="dhour"></div>
+                                <label>Horas</label>
+                            </div><!-- .countdown-holder -->
 
-                        <div class="countdown-holder col-3">
-                            <div class="dsec"></div>
-                            <label>Segundos</label>
-                        </div><!-- .countdown-holder -->
-                    </div><!-- .countdown -->
+                            <div class="countdown-holder col-3">
+                                <div class="dmin"></div>
+                                <label>Minutos</label>
+                            </div><!-- .countdown-holder -->
+
+                            <div class="countdown-holder col-3">
+                                <div class="dsec"></div>
+                                <label>Segundos</label>
+                            </div><!-- .countdown-holder -->
+                        </div><!-- .countdown -->
+
+                    </div>
                 </div><!-- .col-12 -->
             </div><!-- row -->
 
@@ -111,19 +115,25 @@ title: I Encontro Mundial AMM 2019
                     <div class="lineup-artists-headline">
                         <div class="entry-title">
                             <p>I ENCONTRO MUNDIAL AMM</p>
-                            <h2>Sobre o Evento</h2>
+                            <h2 id="evento">Sobre o Evento</h2>
                         </div><!-- entry-title -->
                         <p>Sobre o evento</p>
+                        <p>
+                            <h3 style="color: gold">Valor da Inscrição: <del style="color: hsl(0,0%,48%)">R$ 120,00</del>
+                                <span style="font-size: 120%; color: green">R$ 100,00</span></h3>
+                            <h4 style="color: hsl(0,0%,48%)">Desconto por tempo limitado para inscrição realizadas até
+                                dia XX/XX/19!</h4>
+                        </p>
                     </div><!-- lineup-artists-headline -->
                 </div><!-- col-12 -->
-            </div><!-- row -->           
+            </div><!-- row -->
 
             <div class="row">
                 <div class="col-12">
                     <div class="lineup-artists-headline">
                         <div class="entry-title">
                             <p>I ENCONTRO MUNDIAL AMM</p>
-                            <h2>Informações úteis</h2>
+                            <h2 id="informacoes">Informações úteis</h2>
                         </div><!-- entry-title -->
 
                         <div class="lineup-artists">
@@ -136,13 +146,26 @@ title: I Encontro Mundial AMM 2019
                                 <div class="lineup-artists-description">
                                     <div class="lineup-artists-description-container">
                                         <div class="entry-title">
-                                            Jamila Williams
+                                            Acomodações
                                         </div><!-- entry-title -->
 
                                         <div class="entry-content">
-                                            <p>Quisque at erat eu libero consequat tempus. Quisque mole stie convallis
-                                                tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis
-                                                viverra eleifend fermentum. </p>
+                                            <p>
+                                                Recomendamos sua hospedagem no <b>CATRE</b> onde também acontecerá toda
+                                                a progração do evento.
+                                                Porém você é livre para escolher qualquer localidade na região, como
+                                                preferir.
+                                            </p>
+                                            <p>
+                                                Se você gosta acampar, em frente ao CATRE há uma área de camping que
+                                                fechamos por R$ 40,00.
+                                                Neste caso, entre em contato diretamento com o proprietário para saber
+                                                da disponibilidade em:
+                                                <address>
+                                                    <b>Camping Palmas das Gaivotas</b><br>
+                                                    (48) 99122-4362 - Tratar com Alcides
+                                                </address>
+                                            </p>
                                         </div><!-- entry-content -->
 
                                     </div><!-- lineup-artists-description-container -->
@@ -158,18 +181,55 @@ title: I Encontro Mundial AMM 2019
 
                                     <div class="lineup-artists-description-container">
                                         <div class="entry-title">
-                                            Sandra Superstar
+                                            CATRE
                                         </div><!-- entry-title -->
 
                                         <div class="entry-content">
-                                            <p>Quisque at erat eu libero consequat tempus. Quisque mole stie convallis
-                                                tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis
-                                                viverra eleifend fermentum. </p>
+                                            <p>
+                                                O CATRE é local oficial onde serão desenvolvidas as atividades do I
+                                                Encontro Mundial AMM. A infraestrutura dos dormitórios é divida em
+                                                blocos. Os apartamentos serão compartilhados com outros membros, pois a
+                                                disponibilidade é limitada.
+                                            </p>
+                                            <p>
+                                                <ul>
+                                                    <li><b>Bloco A e B</b>: cada bloco conta com 16 apartamentos
+                                                        equipados com ar condicionado, banheiro privativo, cama de
+                                                        casal e solteiro (beliches), ventilador de teto, mesa, cadeiras
+                                                        e ar condicionado, com capacidade para até 7 pessoas.</li>
+                                                    <li><b>Bloco C</b>: 14 apartamentos equipados com TV, ar
+                                                        condicionado Split, frigobar, 3 camas box com colchão de mola,
+                                                        1 sofá cama, banho com aquecedor central, com capacidade para
+                                                        até 5 pessoas.</li>
+                                                </ul>
+                                            </p>
+                                            <p>
+                                                <h4 style="color: gold">Custo da hospedagem</h4>
+                                                <ul>
+                                                    <li>Bloco A ou B: R$ 438,00</li>
+                                                    <li>Bloco C: R$ 495,00</li>
+                                                </ul>
+                                                O custo é referente à entrada dia 15/11/19 às 13h, saída em 18/11/19 às
+                                                9h, incluindo três refeições diárias e uso de toda a infraestrutura.
+                                            </p>
+                                            <p>
+                                                <b>Sobre a infraesturutra:</b> Um lugar perfeito para o lazer da sua
+                                                famália ou do seu evento, com
+                                                piscina adulta e infantil aquecida e natural, piscina para jogar
+                                                biribol, sauna seca e única, futebol suíço, quadra poliesportiva de
+                                                basquete, futebol de salão e tênis. Quadra para vôlei de areia e quadra
+                                                para Beach Tênis. Temos cancha de bocha, espiribol e nossa mais nova
+                                                estrutura: um salão de jogos novo, contendo tacobol, pebolim, tênis de
+                                                mesa, mesa de sinuca, sala de convivência e academia. Temos vários
+                                                pontos para colocar redes um deck para descansar, ler e ouvir o som dos
+                                                pássaros e o bicicletário que está disponível sem custo adicional.
+                                            </p>
+                                            <p>
+                                                <a href="http://www.catre.org.br/" target="_blank">Acesse aqui o site
+                                                    do CATRE</a> para mais informações sobre o local e imagens.
+                                            </p>
                                         </div><!-- entry-content -->
 
-                                        <div class="box-link">
-                                            <a href="#"><img src="{{ 'assets/images/box.jpg' | relative_url }}" alt=""></a>
-                                        </div><!-- box-link -->
                                     </div><!-- lineup-artists-description-container -->
                                 </div><!-- lineup-artists-description -->
 
@@ -188,21 +248,61 @@ title: I Encontro Mundial AMM 2019
                                 <div class="lineup-artists-description">
                                     <div class="lineup-artists-description-container">
                                         <div class="entry-title">
-                                            DJ Crazyhead
+                                            "Não vou me hospedar no CATRE"
                                         </div><!-- entry-title -->
 
                                         <div class="entry-content">
-                                            <p>Quisque at erat eu libero consequat tempus. Quisque mole stie convallis
-                                                tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis
-                                                viverra eleifend fermentum. </p>
+                                            <p>
+                                                Esta é uma opções que você pode escolher. Ainda assim é possível
+                                                utilizar dos serviços do CATRE realizando pagamento separadamente.
+                                            </p>
+                                            <p>
+                                                <b>Day Use - R$ 25,00</b>: será cobrada esta taxa no local apenas para
+                                                quem
+                                                deseja utilizar naquele dia a infraestrutura de lazer do CATRE. Não
+                                                quer, não pague (haverá fiscalização).
+                                            </p>
+                                            <p>
+                                                <b>Alimentação - R$ 72,00</b>: este é valor diário para as três
+                                                refeições nas dependências do CATRE.
+                                            </p>
                                         </div><!-- entry-content -->
 
-                                        <div class="box-link">
-                                            <a href="#"> <img src="{{ 'assets/images/box.jpg' | relative_url }}" alt=""></a>
-                                        </div><!-- box-link -->
                                     </div><!-- lineup-artists-description-container -->
                                 </div><!-- lineup-artists-description -->
                             </div><!-- lineup-artists-wrap -->
+
+                            <div class="lineup-artists-wrap flex flex-wrap">
+                                <div class="lineup-artists-description">
+                                    <figure class="featured-image d-md-none">
+                                        <a href="#"> <img src="{{ 'assets/images/mathew-kane.jpg' | relative_url }}"
+                                                alt=""> </a>
+                                    </figure><!-- featured-image -->
+
+                                    <div class="lineup-artists-description-container">
+                                        <div class="entry-title">
+                                            Venda de Materiais
+                                        </div><!-- entry-title -->
+
+                                        <div class="entry-content">
+                                            <p>
+                                                Será liberado a venda materiais de suas regionais tais como
+                                                adesivos, botons, camisetas, bonés e demais produtos. Isto deve ser
+                                                informado ao fazer a inscrição. Apenas os Diretores
+                                                Regionais/Estaduais/Nacional poderão expor materiais sem nenhum custo.
+                                                Não será permitido a venda por membros.
+                                            </p>
+                                        </div><!-- entry-content -->
+
+                                    </div><!-- lineup-artists-description-container -->
+                                </div><!-- lineup-artists-description -->
+
+                                <figure class="featured-image d-none d-md-block">
+                                    <a href="#"> <img src="{{ 'assets/images/mathew-kane.jpg'| relative_url }}" alt="">
+                                    </a>
+                                </figure><!-- featured-image -->
+                            </div><!-- lineup-artists-wrap -->
+
                         </div><!-- lineup-artists -->
                     </div><!-- lineup-artists-headline -->
                 </div><!-- col-12 -->
@@ -213,264 +313,60 @@ title: I Encontro Mundial AMM 2019
                     <div class="the-complete-lineup">
                         <div class="entry-title">
                             <p>I ENCONTRO MUNDIAL AMM</p>
-                            <h2>Programação</h2>
+                            <h2 id="programacao">Programação</h2>
                         </div><!-- entry-title -->
 
-                        <div class="row the-complete-lineup-artists">
-                            <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                <figure class="featured-image">
-                                    <a href="#"> <img src="{{ 'assets/images/image-1.jpg' | relative_url }}" alt="">
-                                    </a>
-                                    <a href="#" class="box-link"> <img src="{{ 'assets/images/box.jpg' | relative_url }}"
-                                            alt=""> </a>
-                                </figure><!-- featured-image -->
-
-                                <h2>Miska Smith</h2>
-                            </div><!-- artist-single -->
-
-                            <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                <figure class="featured-image">
-                                    <a href="#"> <img src="{{ 'assets/images/image-2.jpg' | relative_url }}" alt="">
-                                    </a>
-                                    <a href="#" class="box-link"> <img src="{{ 'assets/images/box.jpg' | relative_url }}"
-                                            alt=""> </a>
-                                </figure><!-- featured-image -->
-
-                                <h2>Hayley Down</h2>
-                            </div><!-- artist-single -->
-
-                            <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                <figure class="featured-image">
-                                    <a href="#"> <img src="{{ 'assets/images/image-3.jpg' | relative_url }}" alt="">
-                                    </a>
-                                    <a href="#" class="box-link"> <img src="{{ 'assets/images/box.jpg' | relative_url }}"
-                                            alt=""> </a>
-                                </figure><!-- featured-image -->
-
-                                <h2>The Band Song</h2>
-                            </div><!-- artist-single -->
-
-                            <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                <figure class="featured-image">
-                                    <a href="#"> <img src="{{ 'assets/images/image-4.jpg' | relative_url }}" alt="">
-                                    </a>
-                                    <a href="#" class="box-link"> <img src="{{ 'assets/images/box.jpg' | relative_url }}"
-                                            alt=""> </a>
-                                </figure><!-- featured-image -->
-
-                                <h2>Pink Machine</h2>
-                            </div><!-- artist-single -->
-
-                            <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                <figure class="featured-image">
-                                    <a href="#"> <img src="{{ 'assets/images/image-5.jpg' | relative_url }}" alt="">
-                                    </a>
-                                    <a href="#" class="box-link"> <img src="{{ 'assets/images/box.jpg' | relative_url }}"
-                                            alt=""> </a>
-                                </figure><!-- featured-image -->
-
-                                <h2>Brasil Band</h2>
-                            </div><!-- artist-single -->
-
-                            <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                <figure class="featured-image">
-                                    <a href="#"> <img src="{{ 'assets/images/image-6.jpg' | relative_url }}" alt="">
-                                    </a>
-                                    <a href="#" class="box-link"> <img src="{{ 'assets/images/box.jpg' | relative_url }}"
-                                            alt=""> </a>
-                                </figure><!-- featured-image -->
-
-                                <h2>Mickey</h2>
-                            </div><!-- artist-single -->
-
-                            <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                <figure class="featured-image">
-                                    <a href="#"> <img src="{{ 'assets/images/image-7.jpg' | relative_url }}" alt="">
-                                    </a>
-                                    <a href="#" class="box-link"> <img src="{{ 'assets/images/box.jpg' | relative_url }}"
-                                            alt=""> </a>
-                                </figure><!-- featured-image -->
-
-                                <h2>DJ Girl</h2>
-                            </div><!-- artist-single -->
-
-                            <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                <figure class="featured-image">
-                                    <a href="#"> <img src="{{ 'assets/images/image-8.jpg' | relative_url }}" alt="">
-                                    </a>
-                                    <a href="#" class="box-link"> <img src="{{ 'assets/images/box.jpg' | relative_url }}"
-                                            alt=""> </a>
-                                </figure><!-- featured-image -->
-
-                                <h2>Stan Smith</h2>
-                            </div><!-- artist-single -->
-                        </div><!-- the-complete-lineup-artists -->
-
-                        <div class="row justify-content-center">
-                            <div class="see-complete-lineup">
-                                <div class="entry-footer">
-                                    <a href="#" class="btn">See all lineup</a>
-                                </div>
+                        <div class="row lineup-artists">
+                            <div class="col">
+                                <p>Em breve...</p>
                             </div>
-                        </div>
-                    </div><!-- the-complete-lineup -->
-                </div><!-- col-12 -->
-            </div><!-- row -->
-        </div><!-- container -->
-
-        <div class="homepage-next-events">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="entry-title">
-                            <p>I ENCONTRO MUNDIAL AMM</p>
-                            <h2>Our Next Events</h2>
-                        </div><!-- entry-title -->
+                        </div><!-- the-complete-lineup -->
                     </div><!-- col-12 -->
                 </div><!-- row -->
             </div><!-- container -->
 
-            <div class="next-event-slider-wrap">
-                <div class="swiper-container next-event-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="next-event-content">
-                                <figure class="featured-image">
-                                    <img src="{{ 'assets/images/next-event-1.jpg' | relative_url }}" alt="">
+        </div>
 
-                                    <a href="#" class="entry-content flex flex-column justify-content-center align-items-center">
-                                        <h3>Welcoming Party 2018</h3>
-                                        <p>Green Palace, 22 Street, 23-28, Los Angeles California</p>
-                                    </a>
-                                </figure><!-- featured-image -->
-                            </div><!-- next-event-content -->
-                        </div><!-- swiper-slide" -->
+        <footer class="site-footer">
+            <div class="footer-cover-title flex justify-content-center align-items-center">
+                <h2 id="contato">ENCONTRO AMM</h2>
+            </div><!-- .site-footer -->
 
-                        <div class="swiper-slide">
-                            <div class="next-event-content">
-                                <figure class="featured-image">
-                                    <img src="{{ 'assets/images/next-event-2.jpg' | relative_url }}" alt="">
+            <div class="footer-content-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="entry-title">
+                                <a href="#">I ENCONTRO MUNDIAL AMM</a>
+                            </div><!-- entry-title -->
 
-                                    <a href="#" class="entry-content flex flex-column justify-content-center align-items-center">
-                                        <h3>Welcoming Party 2018</h3>
-                                        <p>Green Palace, 22 Street, 23-28, Los Angeles California</p>
-                                    </a>
-                                </figure><!-- featured-image -->
-                            </div><!-- next-event-content -->
-                        </div><!-- swiper-slide" -->
+                            <div class="entry-mail">
+                                <a href="mailto:contato@amm-brasil.org">contato@amm-brasil.org</a>
+                            </div><!-- .entry-mail -->
 
-                        <div class="swiper-slide">
-                            <div class="next-event-content">
-                                <figure class="featured-image">
-                                    <img src="{{ 'assets/images/next-event-3.jpg' | relative_url }}" alt="">
+                            <div class="copyright-info">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                2018 Todos os direitos reservados | Baseado no template da <a href="https://colorlib.com"
+                                    target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </div><!-- copyright-info -->
+                        </div><!-- col -->
+                    </div><!-- row -->
+                </div><!-- container -->
+            </div><!-- footer-content-wrapper -->
+        </footer><!-- site-footer -->
 
-                                    <a href="#" class="entry-content flex flex-column justify-content-center align-items-center">
-                                        <h3>Welcoming Party 2018</h3>
-                                        <p>Green Palace, 22 Street, 23-28, Los Angeles California</p>
-                                    </a>
-                                </figure><!-- featured-image -->
-                            </div><!-- next-event-content -->
-                        </div><!-- swiper-slide" -->
+        <button class="btn btn-info back-to-top" title="Go to top"><i class="fa fa-arrow-up"></i></button>
 
-                        <div class="swiper-slide">
-                            <div class="next-event-content">
-                                <figure class="featured-image">
-                                    <img src="{{ 'assets/images/next-event-1.jpg' | relative_url }}" alt="">
-
-                                    <a href="#" class="entry-content flex flex-column justify-content-center align-items-center">
-                                        <h3>Welcoming Party 2018</h3>
-                                        <p>Green Palace, 22 Street, 23-28, Los Angeles California</p>
-                                    </a>
-                                </figure><!-- featured-image -->
-                            </div><!-- next-event-content -->
-                        </div><!-- swiper-slide" -->
-
-                        <div class="swiper-slide">
-                            <div class="next-event-content">
-                                <figure class="featured-image">
-                                    <img src="{{ 'assets/images/next-event-2.jpg' | relative_url }}" alt="">
-
-                                    <a href="#" class="entry-content flex flex-column justify-content-center align-items-center">
-                                        <h3>Welcoming Party 2018</h3>
-                                        <p>Green Palace, 22 Street, 23-28, Los Angeles California</p>
-                                    </a>
-                                </figure><!-- featured-image -->
-                            </div><!-- next-event-content -->
-                        </div><!-- swiper-slide" -->
-
-                        <div class="swiper-slide">
-                            <div class="next-event-content">
-                                <figure class="featured-image">
-                                    <img src="{{ 'assets/images/next-event-3.jpg' | relative_url }}" alt="">
-
-                                    <a href="#" class="entry-content flex flex-column justify-content-center align-items-center">
-                                        <h3>Welcoming Party 2018</h3>
-                                        <p>Green Palace, 22 Street, 23-28, Los Angeles California</p>
-                                    </a>
-                                </figure><!-- featured-image -->
-                            </div><!-- next-event-content -->
-                        </div><!-- swiper-slide" -->
-                    </div><!-- .swiper-wrapper -->
-                </div><!-- .swiper-container -->
-
-                <div class="swiper-button-next">
-                    <img src="{{ 'assets/images/button.png' | relative_url }}" alt="">
-                </div><!-- .slider-button -->
-            </div><!-- .next-event-slider-wrap -->
-        </div><!-- homepage-next-events -->
-
-    </div>
-
-    <footer class="site-footer">
-        <div class="footer-cover-title flex justify-content-center align-items-center">
-            <h2>SUNFEST</h2>
-        </div><!-- .site-footer -->
-
-        <div class="footer-content-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="entry-title">
-                            <a href="#">SUNFEST</a>
-                        </div><!-- entry-title -->
-
-                        <div class="entry-mail">
-                            <a href="#">SAYHELLO@SUNFEST.COM</a>
-                        </div><!-- .entry-mail -->
-
-                        <div class="copyright-info">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                            template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </div><!-- copyright-info -->
-
-                        <div class="footer-social">
-                            <ul class="flex justify-content-center align-items-center">
-                                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div><!-- footer-social -->
-                    </div><!-- col -->
-                </div><!-- row -->
-            </div><!-- container -->
-        </div><!-- footer-content-wrapper -->
-    </footer><!-- site-footer -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.collapsible/1.2/jquery.collapsible.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js'></script>
-    <script src='{{ 'assets/js/custom.js' | relative_url }}'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.collapsible/1.2/jquery.collapsible.min.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js'></script>
+        <script src='{{ 'assets/js/custom.js' | relative_url }}'></script>
 </body>
 
 </html>

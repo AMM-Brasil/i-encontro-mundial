@@ -1,16 +1,16 @@
 
-(function($) {
+(function ($) {
     // 'use strict';
 
     // Main Navigation
-    $( '.hamburger-menu' ).on( 'click', function() {
+    $('.hamburger-menu').on('click', function () {
         $(this).toggleClass('open');
         $('.site-navigation').toggleClass('show');
     });
 
     var countdown_date = $('.countdown').data("date");
 
-    $('.countdown').countdown(countdown_date, function(event) {
+    $('.countdown').countdown(countdown_date, function (event) {
         $('.dday').html(event.strftime('%-D'));
         $('.dhour').html(event.strftime('%-H'));
         $('.dmin').html(event.strftime('%-M'));
@@ -57,16 +57,16 @@
     });
 
     // Buy Tickets Form
-    $(".increase-ticket").click(function() {
+    $(".increase-ticket").click(function () {
         var $n = $(this)
             .parent(".number-of-tickets")
             .parent(".flex")
             .parent(".ticket-row")
             .find(".ticket-count");
-        $n.val(Number($n.val())+1 );
+        $n.val(Number($n.val()) + 1);
     });
 
-    $(".decrease-ticket").click(function() {
+    $(".decrease-ticket").click(function () {
         var $n = $(this)
             .parent(".number-of-tickets")
             .parent(".flex")
@@ -74,20 +74,20 @@
             .find(".ticket-count");
         var amount = Number($n.val());
         if (amount > 0) {
-            $n.val(amount-1);
+            $n.val(amount - 1);
         }
     });
 
-    $(".clear-ticket-count").on( 'click', function() {
+    $(".clear-ticket-count").on('click', function () {
         var $count = $('.ticket-count');
         $count.val('1');
     });
 
     // Tabs
-    $(function() {
+    $(function () {
         $('.tab-content:first-child').show();
 
-        $('.tab-nav').bind('click', function(e) {
+        $('.tab-nav').bind('click', function (e) {
             $this = $(this);
             $tabs = $this.parent().parent().next();
             $target = $($this.data("target"));
@@ -108,7 +108,7 @@
         arrowDclass: 'arrow-d'
     });
 
-    $('.accordion-wrap .entry-title').on('click', function() {
+    $('.accordion-wrap .entry-title').on('click', function () {
         $('.accordion-wrap .entry-title').removeClass('active');
         $(this).addClass('active');
     });
@@ -122,7 +122,7 @@
         fill: {
             gradient: ["#00d1ff", "#1effc5"]
         }
-    }).on('circle-animation-progress', function(event, progress) {
+    }).on('circle-animation-progress', function (event, progress) {
         $(this).find('strong').html(Math.round(75 * progress) + '<span>%</span>');
     });
 
@@ -134,7 +134,7 @@
         fill: {
             gradient: ["#00d1ff", "#1effc5"]
         }
-    }).on('circle-animation-progress', function(event, progress) {
+    }).on('circle-animation-progress', function (event, progress) {
         $(this).find('strong').html(Math.round(83 * progress) + '<span>%</span>');
     });
 
@@ -146,7 +146,7 @@
         fill: {
             gradient: ["#00d1ff", "#1effc5"]
         }
-    }).on('circle-animation-progress', function(event, progress) {
+    }).on('circle-animation-progress', function (event, progress) {
         $(this).find('strong').html(Math.round(65 * progress) + '<span>%</span>');
     });
 
@@ -158,7 +158,7 @@
         fill: {
             gradient: ["#00d1ff", "#1effc5"]
         }
-    }).on('circle-animation-progress', function(event, progress) {
+    }).on('circle-animation-progress', function (event, progress) {
         $(this).find('strong').html(Math.round(100 * progress) + '<span>%</span>');
     });
 
@@ -173,9 +173,46 @@
         });
     });
 
+    // Select all links with hashes
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function () {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
+
     // Load more events
-    var $container      = $('.blog-list-page');
-    var $item           = $('.single-blog-content');
+    var $container = $('.blog-list-page');
+    var $item = $('.single-blog-content');
 
     $item.slice(0, 6).addClass('visible');
 
@@ -187,14 +224,14 @@
     });
 
     // Back to Top
-    if ( $( '.back-to-top' ).length) {
+    if ($('.back-to-top').length) {
         var scrollTrigger = 500, // px
             backToTop = function () {
                 var scrollTop = $(window).scrollTop();
                 if (scrollTop > scrollTrigger) {
-                    $('.back-to-top').addClass('show');
+                    $('.back-to-top').removeClass('d-none');
                 } else {
-                    $('.back-to-top').removeClass('show');
+                    $('.back-to-top').addClass('d-none');
                 }
             };
         backToTop();
