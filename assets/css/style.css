@@ -4,7 +4,7 @@
 .flex {
     display: flex;
 }
-
+html,body {width: 100% !important}
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
